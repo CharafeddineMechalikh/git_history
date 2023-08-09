@@ -41,11 +41,9 @@ The `export_git_history_multiple.sh` script enhances the export process by provi
 ## removeZeros.sh
 This script processes a summary CSV file containing Git history data and replaces zero values in the columns with the last non-zero value. If the last non-zero value is missing, it is replaced with 0.
 
-Usage
-Clone the repository:
-
-   ```bash
-   ./removeZeros.sh
+### Usage
+    ```bash
+   ./export_git_history_multiple.sh
 
 ### Output:
 
