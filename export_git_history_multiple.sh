@@ -102,16 +102,13 @@ for date in $unique_sorted_dates; do
     # Initialize the summary CSV line with the date
     summary_csv_line="$date"
     
-     # Loop through the CSV files of each repository
+    # Loop through the CSV files of each repository
     for repo_csv in "$output_directory"/*_git_history.csv; do
         # Extract commit count for the current date and repository
         commit_count=$(awk -F',' -v date="$date" '{if ($1 == date) print $2}' "$repo_csv")
         
-        # If commit count is empty, use the last commit count
-        [ -z "$commit_count" ] && commit_count=$last_commit_count
-        
-        # Update last commit count
-        last_commit_count=$commit_count
+        # If commit count is empty, use "0" as default
+        [ -z "$commit_count" ] && commit_count=0
         
         # Append the commit count to the summary CSV line
         summary_csv_line+=",$commit_count"
