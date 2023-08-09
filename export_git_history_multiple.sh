@@ -125,3 +125,4 @@ done
 
 echo "Summary CSV file created at $summary_output/summary_git_history.csv"
 echo "Processed $processed_dates dates across $repo_count repositories"
+ 
