@@ -38,12 +38,16 @@ The `export_git_history_multiple.sh` script enhances the export process by provi
    ./export_git_history_multiple.sh
 5. The script will collect the commit history for each repository and create individual CSV files for each repository's history as well as a summary CSV file. It will also display a progress bar to show the export progress.
 
-## removeZeros.sh
+## `removeZeros.sh`
+
 This script processes a summary CSV file containing Git history data and replaces zero values in the columns with the last non-zero value. If the last non-zero value is missing, it is replaced with 0.
 
 ### Usage
-    ```bash
-   ./export_git_history_multiple.sh
+
+1. **Clone the repository**:
+
+   ```bash
+   .\removeZeros.sh
 
 ### Output:
 
